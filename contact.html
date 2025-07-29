@@ -3,96 +3,60 @@
 <head>
 <meta charset="UTF-8">
 <title> Contact </title>
-
 <style>
-
 body {
-
   background: #F4F4F4;
   margin: 0;
-
 }
-
 .link-title {
-
   text-decoration: none;
   font-size: 24px;
   color: #444444;
-
 }
-
 .container {
-
   width: 780px;
   margin: 0 auto;
   background: #FFF;
   box-shadow: 0px 9px 13px 5px;
-
 }
-
 .header {
-
   padding: 45px 0 20px 40px;
-
 }
-
 .menu {
-
   background: #3b7687;
   padding: 6px 0 6px 40px;
-
 }
-
 .menu a {
-
   color: #c5d6db;
   text-decoration: none;
   font-size: 14px;
   font-family: "Arial Narrow", "Myriad Pro";
-
 }
-
 .menu a:hover {
-
   color: #ecf2f3;
-
 }
-
 aside {
-
   float: left;
   width: 120px;
   padding: 30px 0 0 40px;
-
 }
-
 h1 {
-
   margin: 0px;
   color: #869843;
   font-size: 24px;
   font-family: "Arial Narrow", "Myriad Pro";
   font-weight: normal;
-
 }
-
 .page-heading {
-
   text-align: center;
   margin-bottom: 20px;
-
 }
-
 h2 {
-
   color: #3b7687;
   font-size: 15px;
   margin: 20px 0 5px 0;
-
 }
-
 .main {
-  
   margin: 0 0 0 180px;
   padding: 35px 40px 30px 0;
   color: #444444;
@@ -100,159 +64,99 @@ h2 {
   font-size: 13px;
   line-height: 18px;
   text-emphasis: justify;
-
 }
-
 .main a:hover {
-
   color: #444444;
-
 }
-
 #home-image img {
-
   width: 100%;
-
 }
-
 footer {
-
   padding: 6px 40px 6px 40px;
   background: #d6d6d6;
   font-family: "Lucida Sans Unicode";
   color: #444444;
   font-size: 11px;
   text-align: right;
-
 }
-
 footer a {
-
   text-decoration: none;
   color: #262626;
-
 }
-
 .separator {
-
   color: #FFFFFF;
   font-size: 11px;
-
 }
-
 /*********************Contact Page Styles*********************/
-
 #contact-page #form {
-
   width: 500px;
   padding: 10px 10px 10px 10px;
   margin: 0 auto;
   box-shadow: 0px 9px 13px 5px;
   border-radius: 5px;
-
 }
-
 #contact-page #form input {
-
   width: 100%;
   border-radius: 5px;
   height: 20px;
   background: #D6D6D6;
-
 }
-
 #contact-page #form #message {
-
   width: 100%;
   border-radius: 5px;
   background: #D6D6D6;
-
 }
-
 #contact-page #form #submit {
-
   height: 30px;
   background: rgb(59, 118, 135);
-
 }
-
 </style>
-
 <script>
-
 // alert("Hello!");
-
 </script>
-
 </head>
-
 <body id="contact-page">
-
 <div class="container">
  <header class="header">
-
   <a class="link-title" href="/"> Minimalistic Website </a>
-
  </header>
-
  <nav class="menu">
-
   <a href="index.html"> Home </a> &nbsp; &nbsp; &nbsp;
   <a href="about.html"> About us </a> &nbsp; &nbsp; &nbsp;
   <a href="contact.html"> Contact </a>
-
  </nav>
-
  <aside>
-
   <h1> Side bar </h1>
-
  </aside>
-
  <main class="main">
-
   <h1 class="page-heading"> Contact </h1>
-
   <div id="form">
-
-   <form action="process.php">
-
+   <form method="post" action="process.php">
     <p>
     <label for="name"> Name: </label>
-    <input type="text" name="name" placeholder="Your name">
+    <input type="text" name="name" placeholder="Your name" required>
     </p>
-
     <p>
     <label for="name"> E-mail: </label>
-    <input type="text" name="email" placeholder="Your e-mail"> 
+    <input type="email" name="email" placeholder="Your e-mail" required> 
     </p>
-
     <p>
     <label for="subject"> Subject: </label>
-    <input type="text" name="subject" placeholder="What is the subject?"> 
+    <input type="text" name="subject" placeholder="What is the subject?" required> 
     </p>
-
     <p>
     <label for="message"> Message: </label>
-    <textarea name="message" id="message" cols="30" rows="10" placeholder="How can we help you?"></textarea>
+    <textarea id="message" name="message" cols="30" rows="10" placeholder="How can we help you?" required></textarea>
     </p>
-
     <p>
     <input id="submit" type="submit" name="submit" value="Send Message">
     </p>
-
    </form>
-
   </div>
-
  </main>
-
  <footer>
-
   &copy; 2030 Minimalistic Website &nbsp;<span class="separator">|</span> Design by <a href="http://github.com/matheuspimentel1"> Matheus Pimentel </a>
-
  </footer>
 </div>
-
 </body>
 </html>
